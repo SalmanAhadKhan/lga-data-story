@@ -2,7 +2,6 @@
 This is a good layout for a mobile-first CSS template.
 Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
 Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
-
 Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
 You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
 */
@@ -10,19 +9,82 @@ You will find this is far easier than the opposite task of using CSS to cram you
  LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
 *********************************************************************/
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*********************************************************************
   YOUR MOBILE/BASE STYLES GO HERE
 *********************************************************************/
+
+
 * {
     box-sizing: border-box;
 }
 
+
 html, body {
-    /* Sets default font-size to 16px, ensuring 1em = 16px; */
-    font-size: 18px;
+    font-family: 'Fira Sans';
+    font-size: 23px;
+    color: #010101;
+    width: 500px;
+    padding-right: 60px;
+    padding-left: 80px;
     margin: auto;
+    padding: 10px;
+    background-color: #F8F0E3;
+    line-height: 150%;
 }
+
+
+h1 {
+  font-family: 'Fira Sans';
+  font-size: 50px;
+  font-weight: 700;
+  color: #010101;
+  line-height: 100%
+}
+
+h2 {
+  font-family: 'Fira Sans';
+  font-size: 25px;
+  font-weight: 400;
+  color: #010101;
+  line-height: 5%
+}
+
+h3 {
+  font-family: 'Fira Sans';
+  font-size: 25px;
+  font-weight: 300;
+  color: #010101;
+}
+
+
+img{
+  display: block;
+  width:180px;
+  margin: auto;
+}
+
+.caption{
+  font-style: italic;
+  color: grey;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.flex{
+  background-color: white;
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  font-family: 'Fira Sans';
+  font-size: 20px;
+  font-weight: 300;
+  color: #f4dc7d;
+  line-height: auto;
+}
+
+
 
 
 /*********************************************************************
@@ -31,12 +93,19 @@ html, body {
 @media(min-width: 681px) {
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
-html, body {
-        margin-left: 150px;
-        margin-right: 150px;
-        font-size: 22px;
-    }
-}
+
+    html, body {
+        /* Sets default font-size to 16px, ensuring 1em = 16px; */
+        font-size: 25px;
+        width: 900px;
+        margin: auto;
+      }
+
+      .flex{
+        display: flex;
+      }
+
+
 
 /*********************************************************************
   YOUR DESKTOP-ONLY STYLES GO HERE
@@ -44,3 +113,4 @@ html, body {
 @media(min-width: 729px) {
     /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 729px or larger -- so desktop */
+}
